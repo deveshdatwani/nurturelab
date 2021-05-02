@@ -19,5 +19,6 @@ from advisor.views import create_advisor
 
 
 urlpatterns = [
-    path('admin/advisor/', create_advisor),
+    #path('admin/advisor/', create_advisor),
+    path('admin/',admin.site.urls),
 ]
