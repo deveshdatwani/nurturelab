@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from advisor.views import create_advisor
-
+from user.views import register_user
 
 urlpatterns = [
-    #path('admin/advisor/', create_advisor),
+    path('create_advisor/', create_advisor),
     path('admin/',admin.site.urls),
+    path('user/register/', register_user)
 ]

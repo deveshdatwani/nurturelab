@@ -1,11 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Advisor
+from .forms import AdvisorForm
 
 # Create your views here.
 def create_advisor(request,*args, **kwargs):
-	obj = Advisor.objects.get(name="devesh datwani")
+	'''form = AdvisorForm(request.POST or None)
+	
+	if form.is_valid():
+		form.save()
+
 	context = {
-		"obj":obj
-	}
-	return render(context)
+		"form": form
+	}'''
+	
+	obj = {'object': Advisor.objects.get(id=1)}
+
+	return render(request,"templates/index.html",obj)
