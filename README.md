@@ -57,30 +57,30 @@ The Django project strucure is as follows-
 
 #### 1. /user/register/
 
-	<p>Form requirements: name, email, passowrd<p>
+	Form requirements: name, email, passowrd
 
-	<p>Returns json with status: "200_OK" and "user-id" code if required form is filled correctly or "400_BAD_REQUEST" if not.</p>
+	Returns json with status: "200_OK" and "user-id" code if required form is filled correctly or "400_BAD_REQUEST" if not.
 
 #### 2. /advisor/register
 
 <p>PS- I have purposely set a default value for the url of the photo in order to maintain simplicity of the webapp in the testing stage. The url is a png of an icon that represents a human being.</p>
 
-	<p>Form requirements: name, photo_url</p>
+	Form requirements: name, photo_url
 
-	<p>Returns json with status: "200_OK" code if required form is filled correctly or "400_BAD_REQUEST" if not.<p>
+	Returns json with status: "200_OK" code if required form is filled correctly or "400_BAD_REQUEST" if not.
 
 #### 3. /user/login
 
-	<p>Form requirements: email, password<p>
+	Form requirements: email, password
 
-	<p>Returns json with status: "200_OK" and user-id if the form is filled correctly and the credentials match. If the credentials don't match then "401_BAD_CREDENTIALS" is returned, else "400_BAD_REQUEST" is returned. 
+	Returns json with status: "200_OK" and user-id if the form is filled correctly and the credentials match. If the credentials don't match then "401_BAD_CREDENTIALS" is returned, else "400_BAD_REQUEST" is returned. 
 
 #### 4. user/<user-id>/advisors
 
-	<p> Form requirements: nothing </p>
+	Form requirements: nothing 
 
-	<p> Returns: json of all advisors with their name, id and photo_url
+	Returns: json of all advisors with their "name", "id" and "photo_url".
 
 #### 5. user/<user-id>/advisors/bookings
 
-	<p> Form requirements
+	Form requirements
