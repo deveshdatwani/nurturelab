@@ -4,11 +4,11 @@ from .models import Advisor
 from .forms import AdvisorForm
 
 # Create your views here.
+
 def register_advisor(request,*args, **kwargs):
-	#inser an advisor in the Advisor table
+	#insert an advisor in the Advisor table
 	
 	form = AdvisorForm(request.POST or None)
-	
 	if form.is_valid():
 		form.save()
 		return HttpResponse("200_OK")
@@ -25,4 +25,10 @@ def get_advisors(request, *args, **kwargs):
 
 def book_call(request, *args, **kwargs):
 	#insert an entry into the Calls table
+	
 	return HttpResponse("booked your call")
+
+def get_calls(request, *args, **kwargs):
+	#return all user calls
+
+	return HttpResponse("your calls")

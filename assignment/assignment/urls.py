@@ -15,15 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from advisor.views import register_advisor, get_advisors, book_call
-from user.views import register_user, login, booked_calls
+from advisor.views import register_advisor, get_advisors, book_call, get_calls
+from user.views import register_user, login
 
 urlpatterns = [
-    path('create_advisor/', register_advisor),
     path('admin/',admin.site.urls),
+    path('create_advisor/', register_advisor),
     path('user/register/', register_user),
+    path('user/login/', login),
     path('user/<user-id>/advisors/', get_advisors),
     path('user/<user-id>/<advisor-id>/', book_call),
-    path('user/login/', login),
-    path('user/')
+    path('user/<user-id>/advisor/<booking>/', get_calls),
 ]
