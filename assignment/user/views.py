@@ -16,7 +16,7 @@ def register_user(request, *args, **kwargs):
 			obj['user-id'] = User.objects.get(name=name,email=email).id
 			return JsonResponse({'data':obj})
 		else:
-			return HttpResponse("400_BAD_REQUEST")
+			return JsonResponse({"data":"400_BAD_REQUEST"})
 	else:
 		return render(template_name='register_user', request=request)
 
@@ -31,7 +31,7 @@ def login(request, *args, **kwargs):
 			None
 			#return HttpResponse("200_OK")
 		else:
-			return HttpResponse("400_BAD_REQUEST")
+			return JsonResponse({"data":"400_BAD_REQUEST"})
 	
 	#return the form for loggin in when GET request is made from the browser
 	else:
