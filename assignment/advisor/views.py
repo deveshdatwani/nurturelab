@@ -22,7 +22,7 @@ def get_advisors(request, *args, **kwargs):
 def book_call(request, *args, **kwargs):
 	#insert an entry into the Calls table
 	
-	return HttpResponse("booked your call")
+	return render(template_name="book_call", request=request)
 
 def get_bookings(request, *args, **kwargs):
 	#return all user calls

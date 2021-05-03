@@ -24,6 +24,6 @@ urlpatterns = [
     path('user/register/', register_user),
     path('user/login/', login),
     path('user/advisors/', get_advisors),
-    #path('user/<user-id>/<advisor-id>/', book_call),
+    path('user/bookcall/', book_call),
     path('user/bookings/', get_bookings),
 ]

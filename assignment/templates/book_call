@@ -1,3 +1,13 @@
-<h1> This is a template <h1> 
+{% extends 'base' %}
+{% block content %}
 
-<p> welcome </p>
+<form formaction="">
+<input type="text" name="">
+<br><br>
+<input type="datetime-local" name="">
+<br><br>
+<button type="submit">Book</button>
+</form>
+
+
+{% endblock %}
