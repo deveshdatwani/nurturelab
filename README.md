@@ -48,7 +48,7 @@ The Django project strucure is as follows-
 <p>I have built some templates and populated them with model data using the Django template engine just to visualize the data return. If anyone wishes to visualize, just uncomment the HttpResponse statment under every endpoint and comment out the JsonResonse statements.<p>
 
 <p>A sample template has been shown below.<p>
-![]assets/sample.png
+![](/assets/sample.png)
 
 
 ### endpoints 
