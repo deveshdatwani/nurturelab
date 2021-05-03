@@ -1,0 +1,15 @@
+{% extends 'base' %}
+{% block content %}
+
+<form formaction="index" formmethod="get" value="login" formtarget="" type="submit">
+	<input type="text" name="" placeholder="name">
+	<br><br>
+	<input type="text" name="" placeholder="email">
+	<br><br>
+	<input type="password" name="" placeholder="password">
+	<br><br>
+	<button type="submit" formmethod="post">register</button>
+</form>
+
+
+{% endblock %}

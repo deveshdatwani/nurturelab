@@ -1,0 +1,14 @@
+{% extends 'base' %}
+{% block content %}
+
+<p> All the advisors </p>
+<br>
+
+{% for item in data %}
+    <p> <span style="color:red">Advisor</span> {{item.name}} </p>
+    <p> <span style="color:red">Photo</span> {{item.photo_url}} </p>
+    <p> <span style="color:red">Advisor ID</span> {{item.id}} </p>
+    <br> <br>
+{% endfor %}
+
+{% endblock %}

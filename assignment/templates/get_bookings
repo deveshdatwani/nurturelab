@@ -1,0 +1,16 @@
+{% extends 'base' %}
+{% block content %}
+
+<p> All bookings <p>
+<br>
+
+{% for item in data %}
+
+	<p> <span style="color:red;">Advisor</span> {{item.advisor}} </p>
+	<p> <span style="color:red;">User</span> {{item.user}} </p>
+	<p> <span style="color:red;">Datetime</span> {{item.datetime}} </p>
+	<p> <span style="color:red;">Booking ID</span> {{item.id}} </p>
+	<br><br>
+{% endfor %}
+
+{% endblock %}
