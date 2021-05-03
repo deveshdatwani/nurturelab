@@ -20,7 +20,7 @@ from user.views import register_user, login
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-    path('create_advisor/', register_advisor),
+    path('advisor/register/', register_advisor),
     path('user/register/', register_user),
     path('user/login/', login),
     path('user/<user-id>/advisors/', get_advisors),
