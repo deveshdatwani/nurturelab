@@ -11,7 +11,7 @@ def register_user(request, *args, **kwargs):
 	obj = {"form":form}
 	return render(request, "templates/index.html", obj)\
 
-def login(request, *args, **kwargs)
+def login(request, *args, **kwargs):
 	#login a user
 	return HttpResponse("Logged in")
 

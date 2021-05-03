@@ -23,7 +23,7 @@ urlpatterns = [
     path('advisor/register/', register_advisor),
     path('user/register/', register_user),
     path('user/login/', login),
-    path('user/<user-id>/advisors/', get_advisors),
-    path('user/<user-id>/<advisor-id>/', book_call),
-    path('user/<user-id>/advisor/<booking>/', get_calls),
+    #path('user/<user-id>/advisors/', get_advisors),
+    #path('user/<user-id>/<advisor-id>/', book_call),
+    #path('user/<user-id>/advisor/<booking>/', get_calls),
 ]
