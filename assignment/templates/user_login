@@ -1,9 +1,10 @@
 {% extends 'base' %}
 {% block content %}
 <form formaction="index" formmethod="get" value="login" formtarget="" type="submit">
-	<input type="text" name="">
 	<br><br>
-	<input type="password" name="">
+	<input type="text" name="email" placeholder="email">
+	<br><br>
+	<input type="password" name="password" placeholder="password">
 	<br><br>
 	<button type="submit" formmethod="post">login</button>
 </form>

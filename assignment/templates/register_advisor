@@ -1,12 +1,12 @@
 {% extends 'base' %}
 {% block content %}
 
-<form formaction="index" formmethod="get" value="login" formtarget="" type="submit">
-	<input type="text" name="" placeholder="name">
+<form formaction="" method="post"> {% csrf_token %}
+	<input type="text" name="name" placeholder="name">
 	<br><br>
-	<input type="text" name="" value='static/advisor.jpeg' readonly>
+	<input type="text" name="photo_url" value='https://cdn2.iconfinder.com/data/icons/user-interface-169/32/about-512.png' readonly>
 	<br><br>
-	<button type="submit" formmethod="post">register</button>
+	<button type="submit">register</button>
 </form>
 
 

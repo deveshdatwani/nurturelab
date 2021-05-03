@@ -23,7 +23,7 @@ urlpatterns = [
     path('advisor/register/', register_advisor),
     path('user/register/', register_user),
     path('user/login/', login),
-    path('user/advisors/', get_advisors),
+    path('user/advisor/', get_advisors),
     path('user/bookcall/', book_call),
     path('user/bookings/', get_bookings),
 ]

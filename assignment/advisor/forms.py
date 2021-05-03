@@ -5,6 +5,6 @@ class AdvisorForm(forms.ModelForm):
 	class Meta:
 		model = Advisor
 		fields = [
-			"name",
-			"photo_url"
+			'name',
+			'photo_url'
 		]

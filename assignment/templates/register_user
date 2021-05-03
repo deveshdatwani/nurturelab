@@ -1,14 +1,14 @@
 {% extends 'base' %}
 {% block content %}
 
-<form formaction="index" formmethod="get" value="login" formtarget="" type="submit">
-	<input type="text" name="" placeholder="name">
+<form formaction="" method="post"> {% csrf_token %}
+	<input type="text" name="name" placeholder="name">
 	<br><br>
-	<input type="text" name="" placeholder="email">
+	<input type="text" name="email" placeholder="email">
 	<br><br>
-	<input type="password" name="" placeholder="password">
+	<input type="password" name="password" placeholder="password">
 	<br><br>
-	<button type="submit" formmethod="post">register</button>
+	<button type="submit">register</button>
 </form>
 
 

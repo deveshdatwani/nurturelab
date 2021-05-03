@@ -1,8 +1,11 @@
 {% extends 'base' %}
 {% block content %}
 
+<p> Book an appointment with Advisor </p>
+<br><br>
+
 <form formaction="">
-<input type="text" name="">
+<input type="text" name="" placeholder="Advisor">
 <br><br>
 <input type="datetime-local" name="">
 <br><br>
