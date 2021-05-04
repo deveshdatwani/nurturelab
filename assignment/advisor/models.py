@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 class Advisor(models.Model):
@@ -8,4 +9,4 @@ class Advisor(models.Model):
 class Calls(models.Model):
 	advisor = models.CharField(max_length=30, null=False)
 	user = models.CharField(max_length=30, null=False)
-	datetime = models.DateTimeField()
+	datetime = models.DateTimeField(null=False)

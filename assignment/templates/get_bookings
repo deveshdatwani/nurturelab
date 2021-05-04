@@ -5,7 +5,6 @@
 <br>
 
 {% for item in data %}
-
 	<p> <span style="color:red;">Advisor</span> {{item.advisor}} </p>
 	<p> <span style="color:red;">User</span> {{item.user}} </p>
 	<p> <span style="color:red;">Datetime</span> {{item.datetime}} </p>

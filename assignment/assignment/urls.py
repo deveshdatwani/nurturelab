@@ -24,7 +24,6 @@ urlpatterns = [
     path('user/register/', register_user),
     path('user/login/', login),
     path('user/advisor/', get_advisors),
-    #path('user/bookcall/', book_call, name="book_call"), #user/<user-id>/advisor/<advisor-id>
     path('user/<int:userid>/advisor/<int:advisorid>/', book_call),
     path('user/<int:userid>/advisor/booking/', get_bookings), #user/<user-id>/advisor/booking
 ]

@@ -5,14 +5,13 @@
 <br><br>
 
 <form formaction="" method="post"> {% csrf_token %}
-<input type="text" name"userid">
-<br><br>
-<input type="text" name"advisorid">
-<br><br>
-<input type="datetime-local" name"datetime">
-<br><br>
-<button type="submit">Book</button>
+	<input type="text" name="user">
+	<br><br>
+	<input type="text" name="advisor">
+	<br><br>
+	<input type="datetime-local" name"datetime">
+	<br><br>
+	<button type="submit">Book</button>
 </form>
-
 
 {% endblock %}
