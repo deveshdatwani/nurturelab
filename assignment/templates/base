@@ -21,6 +21,12 @@
 	}
 	.content{
 		text-align: center;
+		background-color: lightblue;
+		width: 60%;
+		height: 15rem;
+		margin: auto;
+		box-shadow: 3px 2px 6px 0px;
+		padding: 20px;
 	}
 </style>
 <body>
