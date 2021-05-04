@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5se8x)_rob+l9q_$p8)vtb8e)^n8!&zys)pb_)7$yjg#7rmb!l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://git.heroku.com/nurturelab-devesh.git']
 
 
 # Application definition

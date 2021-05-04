@@ -37,14 +37,16 @@ def login(request, *args, **kwargs):
 		password = request.POST.get('password')
 
 		try:
-			email_db = User.objects.get(email=email)
+			user_db = User.objects.get(email=email)
 		except:
 			return JsonResponse({'status':'401','body':'User does not exist.'})
 		
-		password_db = User.objects.get(password=password)
+		password_db = user_db.password
 		
-		if password == password_db:
-			return JsonResponse({'status':'200_OK'})
+		print(password_db, password)
+		if password_db == password:
+			id_ = user_db.id
+			return JsonResponse({'status':'200_OK','id':id_})
 		else:
 			return JsonResponse({'status':'401','body':'wrong password'})
 	else:
