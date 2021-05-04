@@ -29,8 +29,8 @@ def register_advisor(request,*args, **kwargs):
 def get_advisors(request, *args, **kwargs):	
 	#fetch all advisors from the Advisor table and list them
 
-	all_advisors = list(Advisor.objects.values()) 
-	obj = {'data':{'status':'200_OK', 'body':all_advisors}}
+	query_set = list(Advisor.objects.values()) 
+	obj = {'data':{'status':'200_OK', 'body':query_set}}
 	
 	return JsonResponse(obj, safe=False)
 	#in case it needs to be shown on the wepage
@@ -55,8 +55,8 @@ def book_call(request, *args, **kwargs):
 def get_bookings(request, *args, **kwargs):	
 	#return all user calls
 
-	all_calls = list(Calls.objects.values())
-	obj = {'data':{'status':'200_OK', 'body':all_calls}}
+	query_set = list(Calls.objects.values())
+	obj = {'data':{'status':'200_OK', 'body':query_set}}
 
 	return JsonResponse(obj, safe=False)
 	#in case it needs to be shown on the webpage
