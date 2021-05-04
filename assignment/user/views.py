@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import User
 from .forms import UserForm
+from django.contrib.auth import authenticate
 
 # Create your views here.
 
@@ -32,13 +33,20 @@ def login(request, *args, **kwargs):
 	#log a user in 
 
 	if request.method == 'POST':
-		auth = request.POST()
+		email = request.POST.get('email')
+		password = request.POST.get('password')
+
+		try:
+			email_db = User.objects.get(email=email)
+		except:
+			return JsonResponse({'status':'401','body':'User does not exist.'})
 		
-		if auth.is_valid():
-			None
+		password_db = User.objects.get(password=password)
+		
+		if password == password_db:
+			return JsonResponse({'status':'200_OK'})
 		else:
-			return JsonResponse({"data":"400_BAD_REQUEST"})
-	
+			return JsonResponse({'status':'401','body':'wrong password'})
 	else:
 		return render(template_name="user_login", request=request)
 

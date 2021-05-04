@@ -1,11 +1,12 @@
 {% extends 'base' %}
 {% block content %}
-<form formaction="" formmethod="post">
-	<br><br>
+
+<form formaction="" method="post"> {% csrf_token %}
 	<input type="text" name="email" placeholder="email">
 	<br><br>
 	<input type="password" name="password" placeholder="password">
 	<br><br>
 	<button type="submit">login</button>
 </form>
+
 {% endblock %}
