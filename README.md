@@ -8,7 +8,13 @@ Date: 04/05/2021
 
 **********************************************
 
-Stuff pending: JWT authentication
+#### Stuff pending: 
+
+  <ul>
+    <li>JWT authentication<li>
+    <li>Heroku deployment</li>
+    <li>Dynamic URL</li>
+  </ul>
 
 **********************************************
 
