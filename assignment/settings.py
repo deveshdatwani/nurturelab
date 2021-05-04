@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-5se8x)_rob+l9q_$p8)vtb8e)^n8!&zys)pb_)7$yjg#7rmb!l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://git.heroku.com/nurturelab-devesh.git']
+ALLOWED_HOSTS = ['127.0.0.1','nurturelab-devesh.herokuapp.com']
 
 
 # Application definition
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.WhiteNoiseMiddleware',
+    #'django.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'assignment.urls'
