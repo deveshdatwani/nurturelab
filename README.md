@@ -14,6 +14,7 @@ Date: 04/05/2021
     <li>JWT authentication</li>
     <li>Heroku deployment</li>
     <li>Dynamic URL</li>
+    <li>User login</li>
   </ul>
 
 **********************************************
@@ -61,7 +62,7 @@ The Django project strucure is as follows-
 <img src="https://github.com/deveshdatwani/nurturelab/blob/main/assets/sample.png" style="height: 300px; width: 600px;">
 
 
-### endpoints 
+### Endpoints 
 
 <p>For simplicity's sake, I did not over complicate the API. A lot more functionality can be added to the given app, like hashing the password which is absolutely important by standard. But I have let such things go in order to deploy an MVP of the app on a heroku server. If the passwords are hashing and you still see this message, then I may have fixed it and not udpate the README.<p>
 
