@@ -8,6 +8,10 @@ Date: 04/05/2021
 
 **********************************************
 
+Stuff pending: JWT authentication
+
+**********************************************
+
 The Django project strucure is as follows- 
 
     - assignment
