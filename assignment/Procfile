@@ -1,1 +1,1 @@
-we: gunicorn assignment.assignment.wsgi --log-file -
+we: gunicorn assignment.wsgi --log-file -
