@@ -9,7 +9,7 @@ class AdvisorForm(forms.ModelForm):
 			'photo_url'
 		]
 
-class BookCallForm():
+class BookCallForm(forms.ModelForm):
 	class Meta:
 		model = Calls
 		fields = [

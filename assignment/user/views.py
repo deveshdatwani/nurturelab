@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from .models import User
@@ -5,6 +6,7 @@ from .forms import UserForm
 
 # Create your views here.
 
+@csrf_exempt
 def register_user(request, *args, **kwargs):
 	#create a user
 
@@ -25,6 +27,7 @@ def register_user(request, *args, **kwargs):
 	else: 
 		return render(template_name='register_user', request=request)
 
+@csrf_exempt
 def login(request, *args, **kwargs):	
 	#log a user in 
 

@@ -1,12 +1,14 @@
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from django.core import serializers
-from .models import Advisor
-from .models import Calls
-from .forms import AdvisorForm
+from django.http import HttpResponse, JsonResponse, Http404
+from .models import Advisor, Calls
+from .forms import AdvisorForm, BookCallForm
+from django.urls import reverse
+from user.models import User
 # Create your views here.
 
 
+@csrf_exempt
 def register_advisor(request,*args, **kwargs):
 	#insert an advisor in the Advisor table
 	
@@ -16,7 +18,7 @@ def register_advisor(request,*args, **kwargs):
 		if form.is_valid():
 			id_ = form.save()
 			obj = {'status':'200_OK', 'advisor-id':id_.id}
-			
+
 			return JsonResponse({'data':obj}, safe=False,)
 		
 		else:
@@ -26,6 +28,7 @@ def register_advisor(request,*args, **kwargs):
 		return render(template_name='register_advisor', request=request)
 
 
+@csrf_exempt
 def get_advisors(request, *args, **kwargs):	
 	#fetch all advisors from the Advisor table and list them
 
@@ -37,27 +40,37 @@ def get_advisors(request, *args, **kwargs):
 	#return render(request=request, template_name="get_advisors", context=obj)
 
 
+@csrf_exempt
 def book_call(request, *args, **kwargs):	
 	#insert an entry into the Calls table
 
 	if request.method == 'POST':
-		form = BookCallForm(request.POST or None)
+		url = request.get_full_path().split('/')
+		userid = url[2]
+		advisorid = url[4]
+		user = User.objects.get(id=userid)
+		advisor = Advisor.objects.get(id=advisorid)
+		print(request.POST)
+		#datetime = '2020-12-12 06:00:00'
+		#alls.objects.create(user=user.name, advisor=advisor.name, datetime=datetime)
 		
-		if form.is_valid():
-			id_ = form.save()
-			obj = {'status':'200_OK', 'booking-id':id_}
-			
-			return JsonResponse({'data':obj}, safe=False)
-
 	return render(template_name="book_call", request=request)
 
 
+@csrf_exempt
 def get_bookings(request, *args, **kwargs):	
 	#return all user calls
 
 	query_set = list(Calls.objects.values())
-	obj = {'data':{'status':'200_OK', 'body':query_set}}
+	response = {'data':query_set}
 
-	return JsonResponse(obj, safe=False)
+	return JsonResponse(response)
+
 	#in case it needs to be shown on the webpage
-	#return render(template_name="get_bookings", request=request, context=obj)
+	#return render(template_name="get_bookings", request=request, context=response)
+
+
+
+
+
+

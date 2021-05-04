@@ -4,10 +4,12 @@
 <p> Book an appointment with Advisor </p>
 <br><br>
 
-<form formaction="">
-<input type="text" name="" placeholder="Advisor">
+<form formaction="" method="post"> {% csrf_token %}
+<input type="text" name"userid">
 <br><br>
-<input type="datetime-local" name="">
+<input type="text" name"advisorid">
+<br><br>
+<input type="datetime-local" name"datetime">
 <br><br>
 <button type="submit">Book</button>
 </form>
