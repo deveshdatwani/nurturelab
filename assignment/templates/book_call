@@ -9,7 +9,7 @@
 	<br><br>
 	<input type="text" name="advisor">
 	<br><br>
-	<input type="datetime-local" name"datetime">
+	<input type="datetime-local" name="datetime">
 	<br><br>
 	<button type="submit">Book</button>
 </form>

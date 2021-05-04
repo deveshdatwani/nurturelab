@@ -59,8 +59,15 @@ def book_call(request, *args, **kwargs):
 		except Advisor.objects.DoesNotExist:
 			raise Http404
 
-		datetime = request.POST['datetime']
-		Calls.objects.create(user=user.name, advisor=advisor.name, datetime=datetime)
+		try:
+			datetime = request.POST['datetime']
+		except Exception as e:
+			return JsonResponse({'status':'400_BAD_REQUEST'})
+		
+		id_ = Calls.objects.create(user=user.name, advisor=advisor.name, datetime=datetime)
+
+		return JsonResponse({'data':{'status':'200_OKAY', 'advisorid':id_}})
+
 		
 	return render(template_name="book_call", request=request)
 
