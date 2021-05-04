@@ -57,30 +57,38 @@ The Django project strucure is as follows-
 
 #### 1. /user/register/
 
-	Form requirements: name, email, passowrd
+Form requirements: name, email, passowrd
 
-	Returns json with status: "200_OK" and "user-id" code if required form is filled correctly or "400_BAD_REQUEST" if not. As of 04/06/2021, the response does not contain the JWT authentication.
+Returns json with status: "200_OK" and "user-id" code if required form is filled correctly or "400_BAD_REQUEST" if not. As of 04/06/2021, the response does not contain the JWT authentication.
 
 #### 2. /advisor/register
 
 <p>PS- I have purposely set a default value for the url of the photo in order to maintain simplicity of the webapp in the testing stage. The url is a png of an icon that represents a human being.</p>
 
-	Form requirements: name, photo_url
+Form requirements: name, photo_url
 
-	Returns json with status code: "200_OK" along with advisor "id" if required form is filled correctly or "400_BAD_REQUEST" if not.
+Returns json with status code: "200_OK" along with advisor "id" if required form is filled correctly or "400_BAD_REQUEST" if not.
 
 #### 3. /user/login
 
-	Form requirements: email, password
+Form requirements: email, password
 
-	Returns json with status code: "200_OK" and "user-id" if the form is filled correctly and the credentials match. If the credentials don't match then "401_AUTHENTICATION_ERROR" is returned, else "400_BAD_REQUEST" is returned. Again, this too does not contain the JWT token, which I will come back to in a while.
+Returns json with status code: "200_OK" and "user-id" if the form is filled correctly and the credentials match. If the credentials don't match then "401_AUTHENTICATION_ERROR" is returned, else "400_BAD_REQUEST" is returned. Again, this too does not contain the JWT token, which I will come back to in a while.
 
 #### 4. user/<user-id>/advisors
 
-	Form requirements: nothing 
+Form requirements: nothing 
 
-	Returns: json of all advisors with their "name", "id" and "photo_url" along with status code: "200_OK"
+Returns: json of all advisors with their "name", "id" and "photo_url" along with status code: "200_OK"
 
-#### 5. user/<user-id>/advisors/bookings
+#### 5. user/<user-id>/advisor/<advisor-id>/
 
-	Form requirements
+Form requirements: booking time and date in string format (datetime format)
+
+Returns: json of status: "200_OK" if the form is legit and the "booking-id"
+
+#### 6. user/<user-id>/<advisor>/<booking>/
+
+  Form requirements: none
+
+  Returns: json format whose "body" key contains array of dictionaries each representing a booking with the relevant details.
