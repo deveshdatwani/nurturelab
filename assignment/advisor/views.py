@@ -14,7 +14,6 @@ def register_advisor(request,*args, **kwargs):
 	
 	if request.method == 'POST':
 		form = AdvisorForm(request.POST or None)
-		print(request.POST)
 		
 		if form.is_valid():
 			id_ = form.save()
@@ -46,7 +45,6 @@ def book_call(request, *args, **kwargs):
 	#insert an entry into the Calls table
 
 	if request.method == 'POST':
-		print(request.POST)
 		url = request.get_full_path().split('/')
 		userid = url[2]
 		advisorid = url[4]
@@ -61,9 +59,8 @@ def book_call(request, *args, **kwargs):
 		except Advisor.objects.DoesNotExist:
 			raise Http404
 
-		print(dir(request.POST))
-		#datetime = request.POST
-		#Calls.objects.create(user=user.name, advisor=advisor.name, datetime=datetime)
+		datetime = request.POST['datetime']
+		Calls.objects.create(user=user.name, advisor=advisor.name, datetime=datetime)
 		
 	return render(template_name="book_call", request=request)
 
