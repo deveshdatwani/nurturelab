@@ -12,7 +12,6 @@ Date: 04/05/2021
 
   <ul>
     <li>JWT authentication</li>
-    <li>Heroku deployment</li>
   </ul>
 
 **********************************************
