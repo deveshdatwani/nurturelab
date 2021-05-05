@@ -53,7 +53,7 @@ The Django project strucure is as follows-
 
 ### The templates folder
 
-<p>I have built some templates and populated them with model data using the Django template engine just to visualize the data return. If anyone wishes to visualize, just uncomment the HttpResponse statment under every endpoint and comment out the JsonResonse statements.<p>
+<p>Though now required, I wrote html for some basic templates and that populate through the Django template engine so as to not have the hassle of using postman. If you wish to render the returned data in Http template, under the view functions(wherever valid), uncomment the HttpResponse statment and comment out the JsonResonse.<p>
 
 <p>A sample template has been shown below.<p>
 <img src="https://github.com/deveshdatwani/nurturelab/blob/main/assets/sample.png" style="height: 300px; width: 600px;">
@@ -61,7 +61,7 @@ The Django project strucure is as follows-
 
 ### Endpoints 
 
-<p>For simplicity's sake, I did not over complicate the API. A lot more functionality can be added to the given app, like hashing the password which is absolutely important by standard. But I have let such things go in order to deploy an MVP of the app on a heroku server. If the passwords are hashing and you still see this message, then I may have fixed it and not udpate the README.<p>
+<p>I did not over complicate the API,which goes to say that a lot more functionality could be added to the application, e.g hashing the password which is standard. I have however looked over these to get the mvp running as soon as possible. If the passwords are hashing and you still see this, then I must have fixed it and not udpated theREADME.<p>
 
 #### 1. /user/register/
 
