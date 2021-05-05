@@ -53,7 +53,7 @@ The Django project strucure is as follows-
 
 ### The templates folder
 
-<p>Though now required, I wrote html for some basic templates and that populate through the Django template engine so as to not have the hassle of using postman. If you wish to render the returned data in Http template, under the view functions(wherever valid), uncomment the HttpResponse statment and comment out the JsonResonse.<p>
+<p>Though not required, I wrote html for some basic templates and that populate through the Django template engine so as to not have the hassle of using postman. If you wish to render the returned data in Http template, under the view functions(wherever valid), uncomment the HttpResponse statment and comment out the JsonResonse.<p>
 
 <p>A sample template has been shown below.<p>
 <img src="https://github.com/deveshdatwani/nurturelab/blob/main/assets/sample.png" style="height: 300px; width: 600px;">
