@@ -93,13 +93,13 @@ Method: GET
 
 Returns: json of all advisors with their "name", "id" and "photo_url" along with status code: "200_OK"
 
-#### 5. user/<user-id>/advisor/<advisor-id>/
+#### 5. user/<"user-id">/advisor/<"advisor-id">/
 
 Form requirements: booking time and date in string format (datetime format)
 
 Returns: json of status: "200_OK" if the form is legit and the "booking-id"
 
-#### 6. user/<user-id>/<advisor>/booking/
+#### 6. user/<"user-id">/<advisor>/booking/
 
   Form requirements: none
   Method = GET
