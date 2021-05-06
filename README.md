@@ -1,4 +1,4 @@
-### This repository contains a django project work for Nurturelab's assignment
+### This repository contains a Django project for Nurturelab's internship assignment
 
 ********************************************* 
 Copy right claims reserved by Devesh Datwani. 
